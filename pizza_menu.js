@@ -1,6 +1,7 @@
 class PizzaMenu {
   constructor() {
     this.pizzaList = []
+    this.receipt = []
   }
   addItem(pizza) {
     this.pizzaList.push(pizza);
@@ -8,11 +9,19 @@ class PizzaMenu {
   getMenu() {
     return this.pizzaList;
   }
-  
-  selectPizza(name) {
-    return this.pizzaList.filter(pizza => pizza.getName == this.name);
 
+  selectPizza(name) {
+    let filtered = this.pizzaList.filter((pizza) => pizza.name === name);
+      if (name === "") {
+        return "No pizza selected"
+      }
+      else {
+        this.receipt.push(filtered);
+      }
   }
 
+  chosenPizzas () { 
+    return this.receipt.flat();
+  }
   }
 module.exports = PizzaMenu
