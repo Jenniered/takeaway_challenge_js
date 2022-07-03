@@ -20,8 +20,21 @@ class PizzaMenu {
       }
   }
 
-  chosenPizzas () { 
+  chosenPizzas() { 
     return this.receipt.flat();
   }
+
+  getTotalPrice() {
+    let sum = 0
+    this.receipt.flat().forEach((pizza) => { 
+      (sum += pizza.getPrice()); })
+    return sum
+  }
+
+  // printReceipt () {
+  //   this.receipt.forEach((pizza) => {
+  //     return(pizza.name);
+  //   })
+  // }
   }
 module.exports = PizzaMenu

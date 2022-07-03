@@ -56,9 +56,29 @@ describe ('pizza menu integration', () => {
     expect(menu.chosenPizzas()).toEqual[pizza_1, pizza_2]
   })
 
+  xit ('selects multiple items from the menu when a user makes an order', () => {
+    const menu = new PizzaMenu();
+    const pizza_1 = new Pizza("Margarita", "£7");
+    const pizza_2 = new Pizza("Four cheese", "£8");
+    const pizza_3 = new Pizza("Vesuvius", "£9");
+    menu.addItem(pizza_1)
+    menu.addItem(pizza_2)
+    menu.addItem(pizza_3)
+    menu.selectPizza("Margarita")
+    menu.selectPizza("Four cheese")
+    expect(menu.printReceipt()).toEqual('Margarita £7, Four cheese £8');
+  })
 
-//   pizza_menu.select("Margarita")
-// pizza_menu.select("Four_Cheese")
-// pizza_menu.print_receipt # => "Margarita ... £7.50", "Four Cheese ... £8"
-
+  it ('returns sum total of pizzas chosen', () => {
+    const menu = new PizzaMenu();
+    const pizza_1 = new Pizza("Margarita", 7);
+    const pizza_2 = new Pizza("Four cheese", 8);
+    const pizza_3 = new Pizza("Vesuvius", 9);
+    menu.addItem(pizza_1)
+    menu.addItem(pizza_2)
+    menu.addItem(pizza_3)
+    menu.selectPizza("Margarita")
+    menu.selectPizza("Four cheese")
+    expect(menu.getTotalPrice()).toEqual(15)
+  })
 })

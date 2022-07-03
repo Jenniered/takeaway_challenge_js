@@ -47,13 +47,13 @@ class PizzaMenu
   print_receipt
      # print itemised receipt from pizza selected
      for the pizzas selected. 
-     # return menu_listing for dishes selected from menu
+     # return readable list for dishes selected from menu
 
   sum_total
      # find total from itemised receipt
-     # remove £ from string and change to float
+     # remove £ from string and change to integer
      # puts values in an array and sum
-     # return total in format £x.xx
+     # return total in format £x
 
 class Pizza
   constructor(name, price) 
@@ -117,7 +117,7 @@ pizza_menu.add(pizza_2)
 pizza_menu.add(pizza_3)
 pizza_menu.select("Margarita")
 pizza_menu.select("Four_Cheese")
-pizza_menu.print_receipt # => "Margarita ... £7.50", "Four Cheese ... £8"
+pizza_menu.print_receipt # => "Margarita   £7.50", "Four Cheese   £8"
 
 # Returns itemised receipt with multiple of same pizza
 pizza_menu = PizzaMenu.new

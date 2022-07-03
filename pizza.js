@@ -1,15 +1,15 @@
 class Pizza {
     constructor(name, price) {
-      this.name = name
-      this.price = price
+      this.name = name;
+      this.price = price;
     }
 
     getName() {
-      return this.name
+      return this.name;
     }
 
     getPrice() {
-      return this.price
+      return this.price;
     }
   }
 
