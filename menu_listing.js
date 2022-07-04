@@ -1,10 +1,12 @@
 class MenuListing {
-  constructor(pizza) {
-    this.pizza = pizza;
+  constructor() {
+    //this.pizza = pizza;
+    this.listing = ""
 }
 
-printListing() {
-  return `${this.pizza.name} ... £${this.pizza.price}` 
+printListing(pizza) {
+  this.listing = `${pizza.name} ... £${pizza.price}` 
+  return this.listing
 }
 }
 

@@ -1,0 +1,23 @@
+{
+  "name": "06_takeaway_challenge_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jenniered/takeaway_challenge_js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jenniered/takeaway_challenge_js/issues"
+  },
+  "homepage": "https://github.com/Jenniered/takeaway_challenge_js#readme",
+  "dependencies": {
+    "jest": "^28.1.2"
+  }
+}

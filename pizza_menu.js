@@ -31,10 +31,10 @@ class PizzaMenu {
     return sum
   }
 
-  // printReceipt () {
-  //   this.receipt.forEach((pizza) => {
-  //     return(pizza.name);
-  //   })
-  // }
+    printReceipt () {
+      return this.receipt.flat().forEach((pizza) => {
+      (pizza.printListing());
+      })
+    }
   }
 module.exports = PizzaMenu
