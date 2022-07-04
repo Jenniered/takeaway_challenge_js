@@ -56,17 +56,17 @@ describe ('pizza menu integration', () => {
     expect(menu.chosenPizzas()).toEqual[pizza_1, pizza_2]
   })
 
-  xit ('selects multiple items from the menu when a user makes an order', () => {
+  it ('selects multiple items from the menu when a user makes an order', () => {
     const menu = new PizzaMenu();
-    const pizza_1 = new Pizza("Margarita", "£7");
-    const pizza_2 = new Pizza("Four cheese", "£8");
-    const pizza_3 = new Pizza("Vesuvius", "£9");
+    const pizza_1 = new Pizza("Margarita", 7);
+    const pizza_2 = new Pizza("Four cheese", 8);
+    const pizza_3 = new Pizza("Vesuvius", 9);
     menu.addItem(pizza_1)
     menu.addItem(pizza_2)
     menu.addItem(pizza_3)
     menu.selectPizza("Margarita")
-    const listing = new MenuListing(pizza_1)
-    expect(listing.printListing()).toEqual('Margarita ... £7');
+    const listing = new MenuListing()
+    expect(listing.printListing(pizza_1)).toEqual('Margarita ... £7');
     // menu.selectPizza("Four cheese")
     //expect(menu.printReceipt()).toEqual('Margarita ... £7');
   })
